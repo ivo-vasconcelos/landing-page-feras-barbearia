@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fera’s Barbershop · Guajeru, Fortaleza</title>
+<meta name="description" content="Fera’s Barbershop, barbearia no Guajeru, em Fortaleza. Nota 4,9 no Google. Chame no WhatsApp e marque seu horário.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sun:#ffc83d;
+  --plum:#2a1238;
+  --paper:#fbfaf7;
+  --muted:#5a4a66;
+  --line:#4a3358;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--plum);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px;border-radius:4px}
+.dark :focus-visible{outline-color:var(--sun)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* Botões */
+.btn{display:inline-block;font-weight:600;font-size:17px;text-decoration:none;padding:15px 28px;border-radius:6px;border:2px solid var(--plum);transition:background .15s,color .15s}
+.btn-solid{background:var(--plum);color:#fff}
+.btn-solid:hover{background:#fff;color:var(--plum)}
+.btn-line{background:transparent;color:var(--plum)}
+.btn-line:hover{background:var(--plum);color:#fff}
+.dark .btn-solid{background:var(--sun);color:var(--plum);border-color:var(--sun)}
+.dark .btn-solid:hover{background:#fff;border-color:#fff}
+.dark .btn-line{color:#fff;border-color:#fff}
+.dark .btn-line:hover{background:#fff;color:var(--plum)}
+
+/* Abertura */
+.hero{background:var(--sun);position:relative;overflow:hidden}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0}
+.mark{font-family:var(--display);font-weight:900;font-size:28px;letter-spacing:.01em;text-decoration:none}
+.top nav{display:flex;gap:28px;font-size:16px;font-weight:500}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero-body{position:relative;padding:48px 0 104px;min-height:560px;display:flex;flex-direction:column;justify-content:center}
+.hero h1{margin:0;position:relative;z-index:1;font-family:var(--display);font-weight:900;font-size:clamp(88px,17vw,248px);line-height:.82;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero p.lead{position:relative;z-index:1;margin:32px 0 0;max-width:28ch;font-size:clamp(20px,2.4vw,26px);line-height:1.35;font-weight:500}
+.actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.rating{position:relative;z-index:1;margin:24px 0 0;font-size:16px}
+
+/* Garras: o elemento marcante da página */
+.claws{position:absolute;right:max(24px,calc((100vw - 1120px)/2 + 24px));top:50%;transform:translateY(-50%);width:clamp(180px,26vw,340px);height:auto;z-index:0}
+
+/* Horários */
+.hours{background:var(--plum);color:#fff;padding:88px 0}
+.hours .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.hours h2,.where h2{margin:0;font-family:var(--display);font-weight:900;font-size:clamp(48px,7vw,96px);line-height:.9;text-transform:uppercase}
+.hours p.note{margin:20px 0 0;color:#d9cde3;max-width:30ch}
+.row{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:20px}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row span:last-child{font-weight:600;text-align:right}
+
+/* Local */
+.where{padding:88px 0}
+.where .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.where address{font-style:normal;margin:0 0 28px}
+.where address strong{display:block;font-size:24px;line-height:1.3}
+.where .actions{margin-top:0}
+.where p.ask{margin:28px 0 0;color:var(--muted);max-width:44ch}
+
+footer{border-top:1px solid #e3dfe8;padding:28px 0;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:820px){
+  .top nav{display:none}
+  .hero-body{padding:32px 0 72px;min-height:0}
+  .claws{top:auto;bottom:-24px;transform:none;width:170px;opacity:.9}
+  .hours,.where{padding:64px 0}
+  .hours .wrap,.where .wrap{grid-template-columns:1fr;gap:32px}
+  .row{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <a class="mark" href="#inicio">Fera’s Barbershop</a>
+      <nav aria-label="Seções">
+        <a href="#horarios">Horários</a>
+        <a href="#local">Onde fica</a>
+      </nav>
+      <a class="btn btn-solid" href="https://wa.me/5585985653388">Agendar</a>
+    </div>
+
+    <div class="hero-body" id="inicio">
+      <h1><span>Fera’s</span><span>Barbershop</span></h1>
+      <p class="lead">Barbearia no Guajeru, em Fortaleza. Marque seu horário pelo WhatsApp.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="https://wa.me/5585985653388">Chamar no WhatsApp</a>
+        <a class="btn btn-line" href="#local">Ver endereço</a>
+      </div>
+      <p class="rating">Nota 4,9 no Google, com 132 avaliações.</p>
+
+      <svg class="claws" viewBox="0 0 320 380" aria-hidden="true" focusable="false">
+        <polygon points="40,0 92,0 56,380 4,380" fill="#e8ab1d"/>
+        <polygon points="132,20 184,20 156,360 104,360" fill="#e8ab1d"/>
+        <polygon points="224,60 276,60 256,330 204,330" fill="#e8ab1d"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hours dark" id="horarios" aria-labelledby="horarios-titulo">
+    <div class="wrap">
+      <div>
+        <h2 id="horarios-titulo">Horários</h2>
+        <p class="note">Aos domingos a barbearia abre pela manhã.</p>
+      </div>
+      <div>
+        <div class="row"><span>Segunda a quinta</span><span>9h às 17h</span></div>
+        <div class="row"><span>Sexta</span><span>9h às 20h</span></div>
+        <div class="row"><span>Sábado</span><span>9h às 20h</span></div>
+        <div class="row"><span>Domingo</span><span>9h às 12h</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="where" id="local" aria-labelledby="local-titulo">
+    <div class="wrap">
+      <h2 id="local-titulo">Onde fica</h2>
+      <div>
+        <address><strong>Rua Prof. José Henrique, 1320</strong>Guajeru, Fortaleza – CE · 60843-270</address>
+        <div class="actions">
+          <a class="btn btn-solid" href="https://wa.me/5585985653388">WhatsApp (85) 98565-3388</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/place/?q=place_id:ChIJK7FJ3FNFxwcR5YusKAFfn1k">Abrir no mapa</a>
+        </div>
+        <p class="ask">Quer saber os serviços e os valores? Pergunte pelo WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Fera’s Barbershop · Guajeru, Fortaleza</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
